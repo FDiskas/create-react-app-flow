@@ -1,0 +1,43 @@
+{
+  "name": "create-react-app-flow",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "flow:setup": "flow-typed install && flow-typed update",
+    "flow:update": "flow-typed update",
+    "flow:errors": "flow --show-all-errors",
+    "flow:coverage": "flow coverage ./src/index.js --color && flow-coverage-report -i src/**/*.js -x src/**/*.test.js -x src/**/*.spec.js -t html",
+    "postinstall": "yarn flow:update",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "css-module-flow": "^1.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "flow-bin": "^0.64.0",
+    "flow-typed": "^2.3.0",
+    "husky": "^0.14.3",
+    "jest-enzyme": "^4.1.1",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2",
+    "react-test-renderer": "^16.2.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
