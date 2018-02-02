@@ -11,7 +11,6 @@ flow-typed
 all=warn
 
 [options]
-all_include=<PROJECT_ROOT>/src/.*
 module.name_mapper='^.*\.s?css$' -> 'css-module-flow'
 emoji=true
 esproposal.class_static_fields=enable
