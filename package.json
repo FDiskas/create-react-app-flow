@@ -6,7 +6,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0"
+    "react-scripts": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,18 +18,17 @@
     "flow:update": "flow-typed update",
     "flow:errors": "flow --show-all-errors",
     "postinstall": "yarn flow:update",
-    "precommit": "lint-staged",
     "prettier": "prettier --write 'src/**/*.js'",
     "storybook": "start-storybook -p 9000 -s public",
     "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.3.11",
-    "@storybook/addon-info": "^3.3.11",
-    "@storybook/addon-knobs": "^3.3.11",
-    "@storybook/addon-links": "^3.3.11",
-    "@storybook/addons": "^3.3.11",
-    "@storybook/react": "^3.3.11",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-info": "^5.2.8",
+    "@storybook/addon-knobs": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "babel-core": "^6.26.0",
     "css-module-flow": "^1.0.0",
     "enzyme": "^3.3.0",
@@ -37,17 +36,35 @@
     "enzyme-to-json": "^3.3.1",
     "flow-bin": "^0.64.0",
     "flow-typed": "^2.3.0",
-    "husky": "^0.14.3",
-    "jest": "^22.1.4",
-    "jest-enzyme": "^4.1.1",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "jest-enzyme": "^7.1.2",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "rxjs-compat": "^6.5.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --write",
       "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
