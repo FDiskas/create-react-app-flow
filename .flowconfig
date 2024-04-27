@@ -1,5 +1,4 @@
 [ignore]
-<PROJECT_ROOT>/.idea/.*
 <PROJECT_ROOT>/node_modules/.*
 
 [include]
@@ -13,9 +12,6 @@ all=warn
 [options]
 module.name_mapper='^.*\.s?css$' -> 'css-module-flow'
 emoji=true
-esproposal.class_static_fields=enable
-esproposal.class_instance_fields=enable
-esproposal.export_star_as=enable
 include_warnings=true
 
 [strict]

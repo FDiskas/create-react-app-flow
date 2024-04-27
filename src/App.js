@@ -5,7 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 export class App extends React.Component<{}> {
-  render() {
+  render(): React.MixedElement {
     return (
       <div className="App">
         <header className="App-header">
